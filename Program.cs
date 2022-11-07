@@ -8,11 +8,32 @@ namespace WiredBrainCoffeeSurveys.Reports
     {
         static void Main(string[] args)
         {
-            GenerateWinnerEmails();
+            bool quitApp = false;
 
-            GenerateTasksReport();
-
-            GenerateCommentsReport();
+            do
+            {
+                Console.WriteLine("Please specify a report to run (rewards, comments, tasks, quit):");
+                var selectedReport = Console.ReadLine();
+                switch (selectedReport)
+                {
+                    case "rewards":
+                        GenerateWinnerEmails();
+                        break;
+                    case "comments":
+                        GenerateCommentsReport();
+                        break;
+                    case "tasks":
+                        GenerateTasksReport();
+                        break;
+                    case "quit":
+                        quitApp = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid report selected");
+                        break;
+                }
+                Console.WriteLine();
+            } while (!quitApp);
         }
 
         public static void GenerateWinnerEmails()
@@ -101,7 +122,7 @@ namespace WiredBrainCoffeeSurveys.Reports
 
             switch (Q1Results.AreaToImprove)
             {
-                case  "RewardsProgram":
+                case "RewardsProgram":
                     tasks.Add("Revisit the rewards deals.");
                     break;
                 case "Cleanliness":
@@ -116,7 +137,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             }
 
             Console.WriteLine(Environment.NewLine + "Tasks Output:");
-            foreach(var task in tasks)
+            foreach (var task in tasks)
             {
                 Console.WriteLine(task);
             }
