@@ -1,4 +1,4 @@
-namespace WiredBrainCoffeeSurveys.Reports
+﻿namespace WiredBrainCoffeeSurveys.Reports
 {
     public class SurveyResponse
     {
