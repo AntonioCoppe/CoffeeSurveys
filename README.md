@@ -2,7 +2,7 @@
 
 <br>
 
-### Project for Learning how to control Program Flow in C #
+### Project for Learning how to control Program Flow in C#
 
 <br>
 Table of contents:
