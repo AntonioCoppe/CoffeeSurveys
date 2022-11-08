@@ -17,7 +17,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             {
                 Console.WriteLine("Please specify a report to run (rewards, comments, tasks, quit):");
                 var selectedReport = Console.ReadLine();
-
+                
                 Console.WriteLine("Please specify which quarter of data: (q1, q2)");
                 var selectedData = Console.ReadLine();
 
